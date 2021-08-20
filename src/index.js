@@ -11,5 +11,5 @@ refs.input.addEventListener('input', debounce(e => {
   }
   refs.countriesList.innerHTML = '';
   fetchCountries(e)
-  }), 500);
+  }, 500))
 

@@ -10,13 +10,15 @@ export default function fetchCountries(e) {
         error({
           text: "Too many matches found. Please enter a more specific query",
           width: '400px',
-          delay: 2000
+          delay: 1500
         });
         return 
       }
 
       if (countries.length >= 2 && countries.length <= 10) { 
-        refs.countriesList.innerHTML = countries.map(country => listItem(country)).join('');
+        refs.countriesList.innerHTML = countries.map(country => {
+          return listItem(country);
+        }).join('');
         return
       }
 
@@ -25,7 +27,7 @@ export default function fetchCountries(e) {
           return cardTemplate(country);
         })
         
-      refs.countriesList.insertAdjacentHTML('beforeend', markup)
+        refs.countriesList.innerHTML = markup;
       }
   })
 }
