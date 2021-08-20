@@ -6,10 +6,10 @@ import { refs } from './js/refs';
 
 
 refs.input.addEventListener('input', debounce(e => {
+  refs.countriesList.innerHTML = '';
   if (!e.target.value) {
     return 
   }
-  refs.countriesList.innerHTML = '';
   fetchCountries(e)
   }, 500))
 
