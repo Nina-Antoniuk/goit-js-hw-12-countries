@@ -3,7 +3,7 @@ import { cardTemplate, listItem } from './country-tamplate';
 import { refs } from './refs';
 
 export default function fetchCountries(e) {
-  fetch(`https://restcountries.eu/rest/v2/name/${e.target.value}`).
+  fetch(`https://restcountries.com/v3.1/name/${e.target.value}`).
     then(result => result.json()).
     then((countries) => {
       if (countries.length > 10) {

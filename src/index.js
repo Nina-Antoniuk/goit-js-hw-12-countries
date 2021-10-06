@@ -13,4 +13,3 @@ refs.input.addEventListener('input', debounce(e => {
   fetchCountries(e)
   }, 500))
 
-
